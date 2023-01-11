@@ -14,7 +14,7 @@ void hwc_neon_mean_scale(const float* din,
   float32x4_t vscale2 = vdupq_n_f32(1.f / scale[2]);
 
   float* dout_c0 = dout;
-  
+
   int i = 0;
   for (; i < size - 3; i += 4) {
     float32x4x3_t vin3 = vld3q_f32(din);
@@ -78,4 +78,3 @@ void chw_neon_mean_scale(const float* din,
     *(dout_c2++) = (*(din++) - mean[2]) * scale[2];
   }
 }
-

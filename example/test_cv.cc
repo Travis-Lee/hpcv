@@ -24,24 +24,24 @@ void pre_process(const cv::Mat& img, int width, int height, float* data) {
 }
 
 void RunModel(std::string img_path){
-  
+
   // read img and pre-process
   cv::Mat img = imread(img_path, cv::IMREAD_COLOR);
-  
+
   int w=img.cols;
   int h=img.rows;
   int c=img.channels();
-  
+
   cv::Mat mat_resize=cv::Mat(3,3,CV_8UC3,cv::Scalar::all(0));
-  
+
   cv::resize(img, mat_resize, cv::Size(3, 3), cv::INTER_LINEAR);
-  
+
   int size=9;
 
   float *data=new float(size);
-  
+
   pre_process(mat_resize, 3, 3, data);
-  
+
   FILE * fp;
   if((fp = fopen("file.txt","wb"))==NULL){
       printf("cant open the file");
@@ -51,16 +51,16 @@ void RunModel(std::string img_path){
   for(i=0;i<3*3*3;i++){
       fprintf(fp,"%d:%f\n",i,data[i]);
   }
-  
+
   fclose(fp);
-  
+
   delete data;
  }
 
 int main(int argc, char** argv) {
   std::string img_path = "fu.jpg";
-  
+
   RunModel(img_path);
-  
+
   return 0;
 }

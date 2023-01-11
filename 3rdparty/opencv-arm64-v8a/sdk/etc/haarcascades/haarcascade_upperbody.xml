@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!--
-   22x18 upperbody detector (see the detailed description below). 
+   22x18 upperbody detector (see the detailed description below).
 
 //////////////////////////////////////////////////////////////////////////
 | Contributors License Agreement
 | IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.
-|   By downloading, copying, installing or using the software you agree 
+|   By downloading, copying, installing or using the software you agree
 |   to this license.
 |   If you do not agree to this license, do not download, install,
 |   copy or use the software.
@@ -22,8 +22,8 @@
 |    * Redistributions in binary form must reproduce the above
 |      copyright notice, this list of conditions and the following
 |      disclaimer in the documentation and/or other materials provided
-|      with the distribution.  
-|    * The name of Contributor may not used to endorse or promote products 
+|      with the distribution.
+|    * The name of Contributor may not used to endorse or promote products
 |      derived from this software without specific prior written permission.
 |
 | THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
@@ -68,12 +68,12 @@ this paper (available at www.vision.ethz.ch/publications/):
 }
 
 COMMERCIAL:
-If you have any commercial interest in this work please contact 
+If you have any commercial interest in this work please contact
 hkruppa@inf.ethz.ch
 
 
-ADDITIONAL INFORMATION 
-====================== 
+ADDITIONAL INFORMATION
+======================
 Check out the demo movie, e.g. using mplayer or any (Windows/Linux-) player
 that can play back .mpg movies.
 Under Linux that's:
@@ -86,7 +86,7 @@ indoor setting. Using ffplay or mplayer you can pause and continue the
 movie by pressing the space bar.
 
 Detections coming from the different detectors are visualized using
-different line styles: 
+different line styles:
 upper body : dotted line
 lower body : dashed line
 full body  : solid line
@@ -99,10 +99,10 @@ to ensure proper silhouette representation. If you want to get a
 feeling for the training data check out the CBCL data set:
 http://www.ai.mit.edu/projects/cbcl/software-datasets/PedestrianData.html
 
-There is also a small number of false alarms in this sequence.  
+There is also a small number of false alarms in this sequence.
 NOTE: This is per frame detection, not tracking (which is also one of
 the reasons why it is not mislead by the person's shadow on the back
-wall). 
+wall).
 
 On an Intel Xeon 1.7GHz machine the detectors operate at something
 between 6Hz to 14 Hz (on 352 x 288 frames per second) depending on the
@@ -130,7 +130,7 @@ KNOWN LIMITATIONS
    on fragile silhouette information rather than internal (facial) features.
    Still, we found especially the upper body detector to perform amazingly well.
    In contrast to a face detector these detectors will also work at very low
-   image resolutions 
+   image resolutions
 
 Acknowledgements
 ================

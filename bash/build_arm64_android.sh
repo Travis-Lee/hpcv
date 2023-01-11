@@ -41,4 +41,3 @@ echo DEMO_DIR ${DEMO_DIR}
 cp  build_android_aarch64/$BUILD_DIR/src/*.so $DEMO_DIR
 cp  build_android_aarch64/$BUILD_DIR/example/exe/* $DEMO_DIR
 cp  ./data/fu.jpg $DEMO_DIR
-

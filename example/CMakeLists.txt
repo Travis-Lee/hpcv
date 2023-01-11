@@ -13,14 +13,3 @@ add_executable(demo_test test_cv.cc)
 target_link_libraries(demo_test hpcv  ${OpenCV_LIBS} )
 
 install(TARGETS demo_test DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/exe)
-
-
-
-
-
-
-
-
-
-
-
