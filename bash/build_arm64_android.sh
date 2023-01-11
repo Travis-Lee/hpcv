@@ -29,7 +29,7 @@ cmake ../.. \
  -DANDROID_PLATFORM=android-24 \
 
 make -j4 VERBOSE=1
-
+make install/strip
 cd ../../
 DEMO_DIR=build_android_aarch64/$BUILD_DIR/test_demo
 if [ ! -d $DEMO_DIR ]; then
@@ -40,5 +40,5 @@ echo "build_dir:$BUILD_DIR"
 echo DEMO_DIR ${DEMO_DIR}
 cp  build_android_aarch64/$BUILD_DIR/src/*.so $DEMO_DIR
 cp  build_android_aarch64/$BUILD_DIR/example/exe/* $DEMO_DIR
-cp  ./data/test.jpg $DEMO_DIR
+cp  ./data/fu.jpg $DEMO_DIR
 

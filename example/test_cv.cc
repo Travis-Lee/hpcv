@@ -19,8 +19,8 @@ void pre_process(const cv::Mat& img, int width, int height, float* data) {
   float means[3] = {0.5f, 0.5f, 0.5f};
   float scales[3] = {0.5f, 0.5f, 0.5f};
   const float* dimg = reinterpret_cast<const float*>(imgf.data);
-  //chw_neon_mean_scale(dimg, data, width * height, means, scales);
-  hwc_neon_mean_scale(dimg, data, width * height, means, scales);
+  chw_neon_mean_scale(dimg, data, width * height, means, scales);
+  //hwc_neon_mean_scale(dimg, data, width * height, means, scales);
 }
 
 void RunModel(std::string img_path){
@@ -58,7 +58,7 @@ void RunModel(std::string img_path){
  }
 
 int main(int argc, char** argv) {
-  std::string img_path = "./data/test.jpg";
+  std::string img_path = "fu.jpg";
   
   RunModel(img_path);
   

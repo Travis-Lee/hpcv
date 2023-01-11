@@ -8,11 +8,11 @@ set(OpenCV_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../3rdparty/opencv-arm64-v8a/sdk/nati
 
 find_package(OpenCV REQUIRED core highgui imgproc)
 
-add_executable(test_demo test_cv.cc)
+add_executable(demo_test test_cv.cc)
 
-target_link_libraries(test_demo hpcv  ${OpenCV_LIBS} )
+target_link_libraries(demo_test hpcv  ${OpenCV_LIBS} )
 
-install(TARGETS test_demo DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/exe)
+install(TARGETS demo_test DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/exe)
 
 
 
